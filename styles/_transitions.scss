@@ -1,0 +1,84 @@
+@import "./timings";
+
+@mixin y-transition($y-measure, $transition-time) {
+    -webkit-transition: transform $transition-time ease-in-out; /* Safari prior 6.1 */
+    transition: transform $transition-time ease-in-out;
+    transform: scaleY($y-measure);
+    -webkit-transform: scaleY($y-measure);
+    -ms-transform: scaleY($y-measure);
+}
+
+@mixin xy-transition($xy-measure, $transition-time) {
+    -webkit-transition: transform $transition-time ease-in-out; /* Safari prior 6.1 */
+    transition: transform $transition-time ease-in-out;
+    transform: scale($xy-measure);
+    -webkit-transform: scale($xy-measure);
+    -ms-transform: scale($xy-measure);
+}
+
+@mixin x-slide-delayed-opacity($x-measure) {
+    opacity: 0;
+    transform: translateX($x-measure);
+    -webkit-transform: translateX($x-measure);
+    -ms-transform: translateX($x-measure);
+    will-change: transform;
+}
+
+@mixin x-slide-delayed-opacity-reset($transition-time, $opacity-delay-time: 0.3s) {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: transform $transition-time ease-in-out, opacity $transition-time ease $opacity-delay-time; /* Safari prior 6.1 */
+    transition: transform $transition-time ease-in-out, opacity $transition-time ease $opacity-delay-time;
+    will-change: transform;
+}
+
+@mixin y-slide-delayed-opacity($x-measure) {
+    opacity: 0;
+    transform: translateY($x-measure);
+    -webkit-transform: translateY($x-measure);
+    -ms-transform: translateY($x-measure);
+    will-change: transform;
+}
+
+@mixin y-slide-delayed-opacity-reset($transition-time, $opacity-delay-time: 0.3s) {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: all $transition-time ease-in-out; /* Safari prior 6.1 */
+    transition: all $transition-time ease-in-out;
+}
+
+@mixin x-slide($x-measure) {
+    visibility: hidden;
+    transform: translateX($x-measure);
+    -webkit-transform: translateX($x-measure);
+    -ms-transform: translateX($x-measure);
+    will-change: transform;
+}
+
+@mixin x-slide-reset($transition-time) {
+    visibility: visible;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: transform $transition-time ease-in-out; /* Safari prior 6.1 */
+    transition: transform $transition-time ease-in-out;
+    will-change: transform;
+}
+
+@mixin y-slide($x-measure) {
+    visibility: hidden;
+    transform: translateY($x-measure);
+    -webkit-transform: translateY($x-measure);
+    -ms-transform: translateY($x-measure);
+    will-change: transform;
+}
+
+@mixin y-slide-reset($transition-time) {
+    visibility: visible;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: transform $transition-time ease-in-out; /* Safari prior 6.1 */
+    transition: transform $transition-time ease-in-out;
+    will-change: transform;
+}

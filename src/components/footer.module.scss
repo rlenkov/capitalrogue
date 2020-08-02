@@ -1,0 +1,45 @@
+@import '../../styles/index';
+
+.footer {
+    position: relative;
+    padding: 20px 20px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        0deg,
+        rgba(61, 68, 68, 0.4) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    p {
+        @include tiny-text;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 50px;
+    a {
+        margin: 5px 0px;
+        text-decoration: none;
+        @include tiny-text;
+    }
+}
+
+@include for-desktop {
+    .footer {
+        padding: 50px 100px;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        a {
+            margin: 10px 20px;
+            text-decoration: none;
+            @include tiny-text;
+        }
+    }
+}

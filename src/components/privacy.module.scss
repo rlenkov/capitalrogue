@@ -1,0 +1,6 @@
+@import '../../styles/index';
+
+.container {
+    padding: 20px;
+    @include blog-text;
+}

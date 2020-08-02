@@ -1,0 +1,96 @@
+@import '../../styles/index';
+
+.article {
+    padding: 10px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: $cr-white;
+    box-shadow: 0 -0.2px 13.7px rgba(0, 0, 0, 0.019),
+        0 -0.2px 17.2px rgba(0, 0, 0, 0.024),
+        0 0.1px 18.4px rgba(0, 0, 0, 0.028), 0 0.8px 18.1px rgba(0, 0, 0, 0.032),
+        0 2.3px 16.3px rgba(0, 0, 0, 0.037), 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.article-header {
+    a {
+        @include large-blog-card-title;
+        text-decoration: none;
+    }
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: $cr-white;
+    box-shadow: 0 -0.2px 13.7px rgba(0, 0, 0, 0.019),
+        0 -0.2px 17.2px rgba(0, 0, 0, 0.024),
+        0 0.1px 18.4px rgba(0, 0, 0, 0.028), 0 0.8px 18.1px rgba(0, 0, 0, 0.032),
+        0 2.3px 16.3px rgba(0, 0, 0, 0.037), 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+.banner-header {
+    a {
+        @include blog-card-title;
+        text-decoration: none;
+    }
+    margin-left: 20px;
+}
+
+.banner-image-box {
+    width: 100px;
+    min-width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+.tag-line {
+    @include tags-text;
+}
+
+.date {
+    @include tiny-text;
+}
+
+.excerpt {
+    @include blog-text;
+    cursor: pointer;
+}
+
+@include for-desktop {
+    .article {
+        padding: 30px;
+        margin: 0px 0px 50px 0px;
+        transition: transform 0.3s ease;
+    }
+    .article:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+    }
+
+    .banner {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+    .banner:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+
+    .banner-image-box {
+        width: 150px;
+        min-width: 150px;
+        height: 150px;
+    }
+}

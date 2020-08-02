@@ -1,0 +1,131 @@
+@import '../../styles/index';
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-feed {
+    position: relative;
+}
+
+.nonFeaturedPc {
+    display: none;
+}
+.nonFeaturedMobile {
+    display: unset;
+    padding: 0 20px;
+}
+
+.side-bar {
+    flex-grow: 1;
+    padding: 0 20px;
+    hr {
+        margin: 30px 0;
+    }
+}
+
+.welcome {
+    display: unset;
+    h3 {
+        @include block-header;
+    }
+    @include blog-text;
+}
+
+.link-box {
+    padding: 20px;
+    word-wrap: normal;
+    h2 {
+        @include blog-title;
+        text-align: center;
+    }
+}
+
+.links {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.featured-links {
+    text-decoration: none;
+    @include blog-headline;
+    margin: 10px;
+    text-align: center;
+}
+
+.featured-links:hover {
+    text-decoration: underline;
+}
+
+.reveal-block {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: all 0.5s ease-in-out; /* Safari prior 6.1 */
+    transition: all 0.5s ease-in-out;
+}
+
+.hide-block {
+    opacity: 0;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    will-change: transform;
+    -webkit-transition: all 0.5s ease-in-out; /* Safari prior 6.1 */
+    transition: all 0.5s ease-in-out;
+}
+
+.place-holder {
+    width: auto;
+    height: 50px;
+    text-align: center;
+}
+
+.arrow-down {
+    border: solid $cr-dark;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.arrow-down:hover {
+    transform: scale(1.1);
+    will-change: transform;
+    -webkit-transition: all 0.2s ease-in-out; /* Safari prior 6.1 */
+    transition: all 0.2s ease-in-out;
+}
+
+@include for-desktop {
+    .home-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .news-feed {
+        padding-left: 30px;
+    }
+
+    .side-bar {
+        padding: 0 30px;
+        width: 50%;
+    }
+
+    .featured-links {
+        display: block;
+        text-align: start;
+    }
+
+    .nonFeaturedPc {
+        display: unset;
+    }
+    .nonFeaturedMobile {
+        display: none;
+    }
+}

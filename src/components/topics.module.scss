@@ -1,0 +1,46 @@
+@import '../../styles/index';
+
+.container {
+    min-height: 80vh;
+    h1 {
+        @include blog-title;
+        text-align: center;
+    }
+    padding: 0 20px;
+}
+
+.selector-block {
+    margin: 20px 10px 50px 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.selector {
+    text-align: center;
+    width: 30%;
+    height: 40px;
+    margin: 3px;
+    background-color: $cr-grey;
+    border: none;
+    outline: 0;
+    @include blog-headline;
+    cursor: pointer;
+}
+
+.selector:hover {
+    opacity: 0.7;
+}
+
+.focus {
+    text-decoration: underline;
+    font-weight: 700;
+    color: $cr-green;
+}
+
+@include for-desktop {
+    .container {
+        padding: 0 50px;
+    }
+}

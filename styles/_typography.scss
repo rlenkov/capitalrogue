@@ -1,0 +1,142 @@
+@import './colors';
+
+@mixin main-header {
+    font-family: 'Permanent Marker';
+    font-size: 32px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $cr-orange;
+    @include for-desktop {
+        font-size: 52px;
+    }
+}
+
+@mixin blog-card-title {
+    font-family: 'Oswald';
+    font-size: 22px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $cr-dark;
+    @include for-desktop {
+        font-size: 22px;
+    }
+}
+
+@mixin large-blog-card-title {
+    font-family: 'Oswald';
+    font-size: 26px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $cr-dark;
+    @include for-desktop {
+        font-size: 28px;
+    }
+}
+
+@mixin blog-title {
+    font-family: 'Abril Fatface';
+    font-size: 25px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $cr-dark;
+    @include for-desktop {
+        font-size: 55px;
+    }
+}
+
+@mixin block-header {
+    font-family: 'Abril Fatface';
+    font-size: 22px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $cr-dark;
+    @include for-desktop {
+        font-size: 22px;
+    }
+}
+
+@mixin menu-text {
+    font-family: 'Oswald';
+    font-size: 22px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $cr-dark;
+    @include for-desktop {
+        font-size: 22px;
+    }
+}
+
+@mixin tiny-text {
+    font-family: 'Oswald';
+    font-size: 12px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $cr-dark;
+    @include for-desktop {
+        font-size: 14px;
+    }
+}
+
+@mixin tags-text {
+    font-family: 'Oswald';
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $cr-green;
+    @include for-desktop {
+        font-size: 17px;
+    }
+}
+
+@mixin blog-headline {
+    font-family: 'Oswald';
+    font-size: 20px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.09;
+    letter-spacing: normal;
+    color: $cr-dark;
+    @include for-desktop {
+        font-size: 22px;
+        font-weight: 600;
+    }
+}
+
+@mixin blog-text {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: $cr-dark;
+    @include for-desktop {
+        font-size: 18px;
+    }
+}

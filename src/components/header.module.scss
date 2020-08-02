@@ -1,0 +1,142 @@
+@import '../../styles/index';
+
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    z-index: $header-z;
+    background-color: $cr-dark;
+}
+
+.header-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+}
+
+.headline {
+    position: relative;
+    left: 10px;
+    margin: 0;
+    text-shadow: 3px 3px 7px rgb(22, 22, 22);
+    a {
+        text-decoration: none;
+        @include main-header;
+    }
+    z-index: $over-all-z;
+}
+
+.hamburger-local {
+    position: relative;
+    right: 10px;
+    z-index: $over-all-z;
+    @include hamburger-handler;
+}
+
+.drawer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        38deg,
+        rgba(61, 155, 78, 1) 0%,
+        rgba(47, 72, 88, 1) 100%
+    );
+    z-index: $over-header-z;
+}
+
+.open {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+.closed {
+    transform: translateX(100vw);
+    transition: transform 0.3s ease;
+}
+
+.drawer-nav {
+    padding: 130px 50px;
+}
+
+.drawer-nav-other {
+    margin-top: 100px;
+}
+
+.drawer-link {
+    text-decoration: none;
+    display: block;
+    @include blog-title;
+    color: $cr-orange;
+    margin-top: 30px;
+    text-shadow: 3px 3px 7px rgb(22, 22, 22)
+}
+
+.drawer-link:hover {
+    text-decoration: underline;
+}
+
+.drawer-link-small {
+    text-decoration: none;
+    display: block;
+    @include blog-text;
+    color: $cr-grey;
+    margin-top: 20px;
+}
+
+.drawer-link-small:hover {
+    text-decoration: underline;
+}
+
+@include for-desktop {
+    .header {
+        position: relative;
+        width: auto;
+        height: 70px;
+    }
+    .header-box {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto auto;
+        width: 950px;
+    }
+
+    .drawer-nav {
+        padding: 0;
+        width: 950px;
+        margin: 170px auto 0 auto;
+    }
+
+    .headline {
+        position: relative;
+        left: 20px;
+    }
+
+    .hamburger-local {
+        position: relative;
+        right: 25px;
+        z-index: $over-all-z;
+        @include hamburger-handler;
+    }
+}
+
+@include for-large-desktop {
+    .header-box {
+        width: 1150px;
+    }
+
+    .drawer-nav {
+        padding: 0;
+        width: 1150px;
+        margin: 200px auto 0 auto;
+    }
+}

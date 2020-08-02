@@ -1,0 +1,16 @@
+{
+    "storage": {
+        "rules": "storage.rules"
+    },
+    "hosting": {
+        "site": "capitalrogue",
+        "public": "public",
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ]
+    }
+}
