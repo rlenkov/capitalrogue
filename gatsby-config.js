@@ -6,9 +6,9 @@ module.exports = {
         },
         description: `A blog for the capitalist rogue.`,
         siteUrl: `https://capitalrogue.com/`,
-        tags: ['Food', 'Leisure', 'Money', 'Learning', 'Memes'],
+        tags: ['Food', 'Leisure', 'Money', 'Learning', 'Memes', 'Media'],
         featured: [
-            `5 Netflix shows for personal growth`,
+            `8 chill Netflix shows to watch without commitment`,
             '6 tips for pro job interview',
             'Life of a social media content creator',
             'Fake gurus and what their trick is',
@@ -36,7 +36,16 @@ module.exports = {
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
-                            maxWidth: 590,
+                            maxWidth: 800,
+                            showCaptions: true,
+                            markdownCaptions: true,
+                        },
+                    },
+                    {
+                        resolve: 'gatsby-remark-embed-youtube',
+                        options: {
+                            width: 800,
+                            height: 400,
                         },
                     },
                     {
@@ -45,6 +54,7 @@ module.exports = {
                             wrapperStyle: `margin-bottom: 1.0725rem`,
                         },
                     },
+                    `gatsby-remark-autolink-headers`,
                     `gatsby-remark-copy-linked-files`,
                     `gatsby-remark-smartypants`,
                 ],
@@ -83,12 +93,7 @@ module.exports = {
                     {
                         family: `Oswald`,
                         subsets: [`latin`],
-                        variants: [
-                            `300`,
-                            `400`,
-                            `600`,
-                            `700`,
-                        ],
+                        variants: [`300`, `400`, `600`, `700`],
                     },
                 ],
             },

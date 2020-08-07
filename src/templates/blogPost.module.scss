@@ -77,9 +77,17 @@
     @include blog-text;
     h2 {
         @include blog-headline;
+        a {
+            @include blog-headline;
+            // text-decoration: none;
+            // color: $cr-green;
+        }
     }
     h3 {
         @include blog-headline;
+        a {
+            @include blog-headline;
+        }
     }
     // blockquote {
     //     background: radial-gradient(
