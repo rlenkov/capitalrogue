@@ -9,8 +9,8 @@ module.exports = {
         tags: ['Food', 'Leisure', 'Money', 'Learning', 'Memes', 'Media'],
         featured: [
             `8 chill Netflix shows to watch without commitment`,
-            '6 tips for pro job interview',
-            'Life of a social media content creator',
+            'All the shady escapades around Bitcoin',
+            'The world of social media influencers',
             'Fake gurus and what their trick is',
         ],
     },

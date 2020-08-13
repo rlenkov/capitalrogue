@@ -5,6 +5,7 @@
 }
 
 .post-header {
+    position: relative;
     height: 350px;
     display: flex;
     flex-direction: column;
@@ -71,6 +72,14 @@
 .side-bar-header {
     text-align: center;
     @include block-header;
+}
+
+.credits {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: $over-base-z;
+    @include credit-text;
 }
 
 .section {

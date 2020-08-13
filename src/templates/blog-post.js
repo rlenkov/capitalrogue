@@ -86,6 +86,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                     >
                         {post.frontmatter.date}
                     </p>
+                    <span className={styles.credits}>
+                        {post.frontmatter.credits}
+                    </span>
                     <div className={styles.socialHeader}>
                         {fbAppId !== null ? (
                             <FacebookMessengerShareButton
@@ -200,6 +203,7 @@ export const pageQuery = graphql`
             html
             frontmatter {
                 title
+                credits
                 cover_image {
                     childImageSharp {
                         fluid(maxWidth: 630, quality: 100) {
