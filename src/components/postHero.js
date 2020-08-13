@@ -88,7 +88,10 @@ export const PostBanner = props => {
                 <p className={styles.tagLine}>
                     {props.tags.split(' ').map(tag => (
                         <span
-                            style={{ marginRight: '5px' }}
+                            style={{
+                                marginRight: '5px',
+                                display: 'inline-block',
+                            }}
                             key={`topic-reference-banner-${tag}`}
                         >{`#${tag.toLowerCase()}`}</span>
                     ))}
