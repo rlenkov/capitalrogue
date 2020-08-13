@@ -67,7 +67,6 @@
 }
 
 @mixin y-slide($x-measure) {
-    visibility: hidden;
     transform: translateY($x-measure);
     -webkit-transform: translateY($x-measure);
     -ms-transform: translateY($x-measure);
@@ -75,7 +74,6 @@
 }
 
 @mixin y-slide-reset($transition-time) {
-    visibility: visible;
     -webkit-transform: none;
     transform: none;
     -webkit-transition: transform $transition-time ease-in-out; /* Safari prior 6.1 */

@@ -44,7 +44,7 @@
 
 @mixin blog-title {
     font-family: 'Abril Fatface';
-    font-size: 25px;
+    font-size: 28px;
     font-weight: 700;
     font-stretch: normal;
     font-style: normal;
@@ -133,7 +133,21 @@
     font-weight: 400;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.5;
+    line-height: 1.8;
+    letter-spacing: normal;
+    color: $cr-dark;
+    @include for-desktop {
+        font-size: 18px;
+    }
+}
+
+@mixin quote-text {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
     letter-spacing: normal;
     color: $cr-dark;
     @include for-desktop {
