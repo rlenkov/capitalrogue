@@ -2,6 +2,16 @@
 
 .site-base {
     background-color: $cr-white;
+    ::-moz-selection {
+        /* Code for Firefox */
+        color: $cr-dark;
+        background: $cr-orange;
+    }
+
+    ::selection {
+        color: $cr-dark;
+        background: $cr-orange;
+    }
 }
 
 .site-container {

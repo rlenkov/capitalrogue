@@ -11,7 +11,7 @@ module.exports = {
             `8 chill Netflix shows to watch without commitment`,
             'All the shady escapades around Bitcoin',
             'The world of social media influencers',
-            'Fake gurus and what their trick is',
+            'How fake gurus operate under the hood',
         ],
     },
     plugins: [
