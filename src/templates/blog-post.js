@@ -9,8 +9,6 @@ import {
     FacebookIcon,
     EmailShareButton,
     EmailIcon,
-    FacebookMessengerShareButton,
-    FacebookMessengerIcon,
 } from 'react-share'
 import { PostBanner, PostHero } from '../components/postHero'
 import Paginator from '../components/paginator'
@@ -62,7 +60,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                 title !== localTitle
             ) {
                 banners.push(
-                    <li>
+                    <li key={`advice-list-${node.fields.slug}`}>
                         <PostBanner
                             key={node.fields.slug}
                             title={title}
@@ -125,33 +123,25 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                         {post.frontmatter.date}
                     </p>
                     <div className={styles.socialHeader}>
-                        {fbAppId !== null ? (
-                            <FacebookMessengerShareButton
-                                url={location.href}
-                                appId={fbAppId}
-                            >
-                                <FacebookMessengerIcon size={32} round />
-                            </FacebookMessengerShareButton>
-                        ) : null}
                         <FacebookShareButton url={location.href}>
                             <FacebookIcon size={32} round />
                         </FacebookShareButton>
                         <TwitterShareButton
                             url={location.href}
-                            title={`Doglify - ${post.frontmatter.title}`}
+                            title={`CR-Blog - ${post.frontmatter.title}`}
                         >
                             <TwitterIcon size={32} round />
                         </TwitterShareButton>
                         <PinterestShareButton
                             url={location.href}
-                            description={`Doglify - ${post.frontmatter.title}`}
+                            description={`CR-Blog - ${post.frontmatter.title}`}
                             media={`${location.origin}/${post.frontmatter.cover_image.childImageSharp.fluid.src}`}
                         >
                             <PinterestIcon size={32} round />
                         </PinterestShareButton>
                         <EmailShareButton
                             url={location.href}
-                            subject={`Doglify - ${post.frontmatter.title}`}
+                            subject={`CR-Blog - ${post.frontmatter.title}`}
                         >
                             <EmailIcon size={32} round />
                         </EmailShareButton>
