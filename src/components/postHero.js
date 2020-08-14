@@ -7,7 +7,13 @@ import styles from './postHero.module.scss'
 
 export const PostHero = props => {
     return (
-        <article className={styles.article}>
+        <article
+            className={
+                props.side
+                    ? [styles.article, styles.onSide].join(' ')
+                    : styles.article
+            }
+        >
             <header className={styles.articleHeader}>
                 <h3>
                     <Link to={props.slug}>{props.title}</Link>
@@ -59,10 +65,12 @@ PostHero.propTypes = {
     tags: PropTypes.string.isRequired,
     description: PropTypes.string,
     fluidImgData: PropTypes.object.isRequired,
+    side: PropTypes.bool,
 }
 
 PostHero.defaultProps = {
     description: null,
+    side: false,
 }
 
 export const PostBanner = props => {
@@ -84,7 +92,7 @@ export const PostBanner = props => {
                 <h3>
                     <Link to={props.slug}>{props.title}</Link>
                 </h3>
-                <small className={styles.date} >{props.date}</small>
+                <small className={styles.date}>{props.date}</small>
                 <p className={styles.tagLine}>
                     {props.tags.split(' ').map(tag => (
                         <span

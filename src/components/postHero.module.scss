@@ -76,6 +76,10 @@
         transition: transform 0.3s ease;
     }
 
+    .on-side {
+        padding: 20px;
+    }
+
     .article:hover {
         border: 5px dotted $cr-orange;
     }

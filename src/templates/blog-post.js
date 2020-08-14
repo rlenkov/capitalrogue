@@ -43,6 +43,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                         }
                         tags={node.frontmatter.tags}
                         date={node.frontmatter.date}
+                        side
                     />,
                 )
             }
