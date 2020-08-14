@@ -115,7 +115,7 @@
 .drawer-link-small {
     text-decoration: none;
     display: block;
-    @include blog-text;
+    @include small-blog-text;
     color: $cr-grey;
     margin-top: 20px;
 }
@@ -137,13 +137,17 @@
         justify-content: space-between;
         align-items: center;
         margin: auto auto;
-        width: 950px;
+        width: 1150px;
     }
 
     .drawer-nav {
         padding: 0;
         width: 950px;
-        margin: 170px auto 0 auto;
+        margin: 150px auto 0 auto;
+    }
+
+    .drawer-link-small {
+        margin-top: 15px;
     }
 
     .headline {
@@ -162,6 +166,10 @@
 @include for-large-desktop {
     .header-box {
         width: 1150px;
+    }
+
+    .drawer-link-small {
+        margin-top: 20px;
     }
 
     .drawer-nav {

@@ -12,7 +12,8 @@ import {
     FacebookMessengerShareButton,
     FacebookMessengerIcon,
 } from 'react-share'
-import { PostBanner } from '../components/postHero'
+import { PostBanner, PostHero } from '../components/postHero'
+import Paginator from '../components/paginator'
 
 import styles from './blogPost.module.scss'
 
@@ -31,11 +32,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             const title = node.frontmatter.title || node.fields.slug
             if (subset.includes(title) && title !== localTitle) {
                 banners.push(
-                    <PostBanner
+                    <PostHero
                         key={`home-page-banner-${node.fields.slug}`}
                         title={title}
                         slug={node.fields.slug}
-                        excerpt={node.excerpt}
+                        excerpt=''
                         description={node.frontmatter.description}
                         fluidImgData={
                             node.frontmatter.cover_image.childImageSharp.fluid
@@ -47,6 +48,42 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             }
         })
         return banners
+    }
+
+    const getRelatedArticles = (nodes, tags, localTitle) => {
+        const banners = []
+        nodes.forEach(({ node }) => {
+            const postTagList = tags.split(' ')
+            const articleTagList = node.frontmatter.tags.split(' ')
+            const title = node.frontmatter.title || node.fields.slug
+            if (
+                articleTagList.some(r => postTagList.includes(r)) &&
+                title !== localTitle
+            ) {
+                banners.push(
+                    <li>
+                        <PostBanner
+                            key={node.fields.slug}
+                            title={title}
+                            slug={node.fields.slug}
+                            excerpt={node.excerpt}
+                            description={node.frontmatter.description}
+                            fluidImgData={
+                                node.frontmatter.cover_image.childImageSharp
+                                    .fluid
+                            }
+                            tags={node.frontmatter.tags}
+                            date={node.frontmatter.date}
+                        />
+                    </li>,
+                )
+            }
+        })
+        if (banners.length !== 0) {
+            return <Paginator elements={banners} />
+        } else {
+            return null
+        }
     }
 
     const backgroundStyle = {
@@ -86,9 +123,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                     >
                         {post.frontmatter.date}
                     </p>
-                    <span className={styles.credits}>
-                        {post.frontmatter.credits}
-                    </span>
                     <div className={styles.socialHeader}>
                         {fbAppId !== null ? (
                             <FacebookMessengerShareButton
@@ -121,6 +155,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                             <EmailIcon size={32} round />
                         </EmailShareButton>
                     </div>
+                    <span className={styles.credits}>
+                        {post.frontmatter.credits}
+                    </span>
                 </header>
                 <div className={styles.verticalDivider}>
                     <article
@@ -154,34 +191,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
                         padding: '20px',
                     }}
                 >
-                    <li>
-                        {previous && (
-                            <PostBanner
-                                title={previous.frontmatter.title}
-                                slug={previous.fields.slug}
-                                fluidImgData={
-                                    previous.frontmatter.cover_image
-                                        .childImageSharp.fluid
-                                }
-                                tags={previous.frontmatter.tags}
-                                date={previous.frontmatter.date}
-                            />
-                        )}
-                    </li>
-                    <li>
-                        {next && (
-                            <PostBanner
-                                title={next.frontmatter.title}
-                                slug={next.fields.slug}
-                                fluidImgData={
-                                    next.frontmatter.cover_image.childImageSharp
-                                        .fluid
-                                }
-                                tags={next.frontmatter.tags}
-                                date={next.frontmatter.date}
-                            />
-                        )}
-                    </li>
+                    {getRelatedArticles(
+                        postList,
+                        post.frontmatter.tags,
+                        post.frontmatter.title,
+                    )}
                 </ul>
             </nav>
         </Layout>

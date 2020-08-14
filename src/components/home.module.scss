@@ -3,10 +3,17 @@
 .home-container {
     display: flex;
     flex-direction: column;
+    hr {
+        border: none;
+        border-top: 10px dotted $cr-orange;
+        margin: 20px 0;
+    }
 }
 
 .news-feed {
     position: relative;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .nonFeaturedPc {
@@ -20,21 +27,35 @@
 .side-bar {
     flex-grow: 1;
     padding: 0 20px;
-    hr {
-        margin: 30px 0;
-    }
 }
 
 .welcome {
-    display: unset;
+    position: relative;
+    cursor: pointer;
+    border: 5px solid transparent;
+}
+
+.welcome:hover {
+    border: 5px dotted $cr-orange;
+}
+
+.over-image-welcome {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: $over-base-z;
+    background-color: rgba(255, 255, 255, 0.5);
     h3 {
         @include block-header;
     }
     @include blog-text;
+    font-style: italic;
+    font-weight: 600;
 }
 
 .link-box {
-    padding: 20px;
+    display: none;
     word-wrap: normal;
     h2 {
         @include blog-title;
@@ -56,6 +77,7 @@
     @include blog-headline;
     margin: 10px;
     text-align: center;
+    width: auto;
 }
 
 .featured-links:hover {
@@ -110,6 +132,11 @@
 
     .news-feed {
         padding-left: 30px;
+        padding-right: 0;
+    }
+
+    .link-box {
+        display: unset;
     }
 
     .side-bar {
@@ -120,6 +147,7 @@
     .featured-links {
         display: block;
         text-align: start;
+        width: 40%;
     }
 
     .nonFeaturedPc {

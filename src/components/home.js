@@ -1,6 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql, Link, navigate } from 'gatsby'
 import { PostHero, PostBanner } from './postHero'
 import Paginator from './paginator'
 
@@ -74,6 +74,30 @@ const Home = () => {
         return <Paginator elements={banners} />
     }
 
+    const getSubsetHeros = (elements, subset) => {
+        const banners = []
+        elements.forEach(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            if (subset.includes(title)) {
+                banners.push(
+                    <PostHero
+                        key={`home-page-banner-${node.fields.slug}`}
+                        title={title}
+                        slug={node.fields.slug}
+                        excerpt={node.excerpt}
+                        description={node.frontmatter.description}
+                        fluidImgData={
+                            node.frontmatter.cover_image.childImageSharp.fluid
+                        }
+                        tags={node.frontmatter.tags}
+                        date={node.frontmatter.date}
+                    />,
+                )
+            }
+        })
+        return <Paginator elements={banners} />
+    }
+
     const getPostHero = (elements, criteria) => {
         let heroPost
         elements.forEach(({ node }) => {
@@ -110,7 +134,7 @@ const Home = () => {
         .map(({ node }) => node.frontmatter.title)
 
     const postHero = getPostHero(posts, mainPost)
-    const featuredPostBanners = getSubsetBanners(posts, featured)
+    const featuredPostBanners = getSubsetHeros(posts, featured)
     const nonFeaturedPostBanners = getSubsetBanners(posts, nonFeatured)
 
     return (
@@ -125,16 +149,28 @@ const Home = () => {
                 <div className={styles.sideBar}>
                     {featuredPostBanners}
                     <hr />
-                    <div className={styles.welcome}>
-                        <h3>Welcome to CR blog!</h3>
-                        <p>
-                            A place where you can find all exciting information
-                            about dogs and pippies for your convenience!
-                        </p>
+                    <div
+                        className={styles.welcome}
+                        onClick={() => {
+                            navigate('/about')
+                        }}
+                    >
+                        <div className={styles.overImageWelcome}>
+                            <h3>Welcome to CR blog!</h3>
+                            <p>
+                                A place where the modern urban survivor can find
+                                all the exciting topics, tips and tricks
+                                necessary to thrive!
+                            </p>
+                        </div>
                         <Img
                             fluid={payload.imageSharp.fluid}
                             objectFit='cover'
-                            style={{ maxWidth: '200px', cursor: 'pointer' }}
+                            style={{
+                                maxWidth: '200px',
+                                cursor: 'pointer',
+                                margin: 'auto',
+                            }}
                         />
                     </div>
                     <hr />
@@ -154,8 +190,8 @@ const Home = () => {
                                 )
                             })}
                         </div>
+                        <hr />
                     </div>
-                    <hr />
                 </div>
 
                 <div className={styles.nonFeaturedMobile}>

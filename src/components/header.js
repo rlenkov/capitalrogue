@@ -68,7 +68,7 @@ export const Header = props => {
                         <span className={styles.hamburgerBox}>
                             <span
                                 style={{
-                                    backgroundColor: `#ffffff`,
+                                    backgroundColor: `#ffa800`,
                                 }}
                                 className={styles.hamburgerInner}
                             ></span>
@@ -123,6 +123,19 @@ export const Header = props => {
                             to={`/contact`}
                         >
                             Contact
+                        </Link>
+                        <Link
+                            className={styles.drawerLinkSmall}
+                            activeClassName={[
+                                styles.drawerLinkSmall,
+                                styles.activeLink,
+                            ].join(' ')}
+                            onClick={() => {
+                                closeNavBar(`/about`)
+                            }}
+                            to={`/about`}
+                        >
+                            About
                         </Link>
                         <Link
                             className={styles.drawerLinkSmall}

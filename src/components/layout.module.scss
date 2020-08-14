@@ -77,9 +77,30 @@
     -webkit-transform: rotate(-135deg);
 }
 
+.consent-box {
+    padding: 10px 0;
+}
+
+.consent-text {
+    @include consent-text;
+    color: $cr-dark;
+}
+
+.consent-button-box {
+    display: block;
+    align-self: center;
+    margin: auto;
+}
+
+.consent-button {
+    background: $cr-orange !important;
+    @include blog-text;
+    font-weight: 600;
+}
+
 @include for-desktop {
     .site-container {
-        width: 950px;
+        width: 1150px;
         margin: auto;
     }
 
@@ -92,6 +113,14 @@
     }
     .back-button {
         display: none;
+    }
+    .consent-button-box {
+        display: block;
+        align-self: center;
+        margin: unset;
+    }
+    .consent-button {
+        background-color: $cr-orange;
     }
 }
 

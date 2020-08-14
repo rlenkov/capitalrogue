@@ -84,7 +84,7 @@ export const PostBanner = props => {
                 <h3>
                     <Link to={props.slug}>{props.title}</Link>
                 </h3>
-                <small>{props.date}</small>
+                <small className={styles.date} >{props.date}</small>
                 <p className={styles.tagLine}>
                     {props.tags.split(' ').map(tag => (
                         <span

@@ -45,10 +45,9 @@ const Layout = props => {
                     className={
                         props.minimize
                             ? styles.siteContainer
-                            : [
-                                  styles.siteContainer,
-                                  styles.adjustPadding,
-                              ].join(' ')
+                            : [styles.siteContainer, styles.adjustPadding].join(
+                                  ' ',
+                              )
                     }
                 >
                     <main className={styles.articles}>{props.children}</main>
@@ -70,17 +69,19 @@ const Layout = props => {
             </div>
             <CookieConsent
                 location='bottom'
-                buttonText='Accept'
-                declineButtonText='Decline'
+                buttonText='Got it!'
+                style={{ background: '#3D9B4E' }}
+                containerClasses={styles.consentBox}
+                contentClasses={styles.consentText}
+                buttonWrapperClasses={styles.consentButtonBox}
+                buttonClasses={styles.consentButton}
                 cookieName='gatsby-gdpr-google-analytics'
             >
                 This website stores cookies on your computer. These cookies are
                 used to collect information about how you interact with this
                 website and allow us to remember you. We use this information in
                 order to improve and customize your browsing experience and for
-                analytics and metrics about our visitors on this website. If you
-                decline, your information won’t be tracked when you visit this
-                website.
+                analytics and metrics about our visitors on this website.
             </CookieConsent>
         </React.Fragment>
     )

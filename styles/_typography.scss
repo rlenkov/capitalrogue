@@ -16,7 +16,7 @@
 
 @mixin blog-card-title {
     font-family: 'Oswald';
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
     font-stretch: normal;
     font-style: normal;
@@ -24,13 +24,13 @@
     letter-spacing: normal;
     color: $cr-dark;
     @include for-desktop {
-        font-size: 22px;
+        font-size: 20px;
     }
 }
 
 @mixin large-blog-card-title {
     font-family: 'Oswald';
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
     font-stretch: normal;
     font-style: normal;
@@ -38,7 +38,7 @@
     letter-spacing: normal;
     color: $cr-dark;
     @include for-desktop {
-        font-size: 28px;
+        font-size: 26px;
     }
 }
 
@@ -57,7 +57,7 @@
 }
 
 @mixin block-header {
-    font-family: 'Abril Fatface';
+    font-family: 'Permanent Marker';
     font-size: 22px;
     font-weight: 700;
     font-stretch: normal;
@@ -85,7 +85,7 @@
 }
 
 @mixin tiny-text {
-    font-family: 'Oswald';
+    font-family: 'Open Sans';
     font-size: 12px;
     font-weight: 400;
     font-stretch: normal;
@@ -99,9 +99,9 @@
 }
 
 @mixin tags-text {
-    font-family: 'Oswald';
+    font-family: 'Permanent Marker';
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.09;
@@ -115,7 +115,7 @@
 @mixin blog-headline {
     font-family: 'Oswald';
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 600;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.09;
@@ -138,6 +138,20 @@
     color: $cr-dark;
     @include for-desktop {
         font-size: 18px;
+    }
+}
+
+@mixin small-blog-text {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: $cr-dark;
+    @include for-desktop {
+        font-size: 16px;
     }
 }
 
@@ -166,5 +180,19 @@
     color: $cr-dark;
     @include for-desktop {
         font-size: 10px;
+    }
+}
+
+@mixin consent-text {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    color: $cr-dark;
+    @include for-desktop {
+        font-size: 16px;
     }
 }
