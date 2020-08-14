@@ -36,10 +36,10 @@ const Disclaimer = () => {
             </p>
             <p>
                 All information provided by capitalrogue.com is not intended to
-                be used as a replacement for veterinarian advice and, by reading
-                or using the content of this site, you acknowledge that
-                capitalrogue.com assumes no liability for any misstatements or
-                inaccuracies. capitalrogue.com will not be held liable in
+                be used as a replacement for medical or veterinarian advice and,
+                by reading or using the content of this site, you acknowledge
+                that capitalrogue.com assumes no liability for any misstatements
+                or inaccuracies. capitalrogue.com will not be held liable in
                 relation to the contents of, or the use of, this website for any
                 business losses, loss of revenue, income, profits, or
                 anticipated savings, loss of contracts or business
@@ -51,8 +51,8 @@ const Disclaimer = () => {
             <p>
                 The content of capitalrogue.com including reviews and
                 recommendations are subject to change. The views and opinions
-                expressed on capitalrogue.com are purely the writer’s own and any
-                product claims, statements, or quotes about products and
+                expressed on capitalrogue.com are purely the writer’s own and
+                any product claims, statements, or quotes about products and
                 services should be verified with the manufacturer.
             </p>
             <p>

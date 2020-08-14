@@ -103,6 +103,18 @@ const About = () => {
                     }}
                     className={styles.aboutImage}
                 />
+                <sub>
+                    <span>
+                        Photo by{' '}
+                        <a href='https://unsplash.com/@mikailduran?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText'>
+                            Mikail Duran
+                        </a>{' '}
+                        on{' '}
+                        <a href='https://unsplash.com/s/photos/punk?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText'>
+                            Unsplash
+                        </a>
+                    </span>
+                </sub>
                 <p>
                     <span>Capitalrogues</span> are not the faint-hearted, coward
                     ones. They are the ones who <span>challenge systems</span>,

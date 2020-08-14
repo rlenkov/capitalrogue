@@ -12,7 +12,7 @@ const Tos = () => {
             <p>
                 Welcome to{' '}
                 <b>
-                    <span>capitalrogue</span>
+                    <span>capitalrogue.com</span>
                 </b>{' '}
                 (“Company”, “we”, “our”, “us”)!
             </p>
@@ -20,11 +20,11 @@ const Tos = () => {
                 These Terms of Service (“Terms”, “Terms of Service”) govern your
                 use of our website located at{' '}
                 <b>
-                    <span>https://capital-rogue.firebaseapp.com/</span>
+                    <span>https://capitalrogue.com/</span>
                 </b>{' '}
                 (together or individually “Service”) operated by{' '}
                 <b>
-                    <span class='company-name'>capitalrogue</span>
+                    <span class='company-name'>capitalrogue.com</span>
                 </b>
                 .
             </p>
@@ -43,7 +43,7 @@ const Tos = () => {
                 then you may not use the Service, but please let us know by
                 emailing at{' '}
                 <b>
-                    <span class='email'>capitalrogue@gmail.com</span>
+                    <span class='email'>richard.lenkovits@gmail.com</span>
                 </b>{' '}
                 so we can try to find a solution. These Terms apply to all
                 visitors, users and others who wish to access or use Service.
@@ -56,7 +56,8 @@ const Tos = () => {
                 marketing or promotional materials and other information we may
                 send. However, you may opt out of receiving any, or all, of
                 these communications from us by following the unsubscribe link
-                or by emailing at <span class='email'>capitalrogue@gmail.com</span>.
+                or by emailing at{' '}
+                <span class='email'>richard.lenkovits@gmail.com</span>.
             </p>
             <div id='purchases'></div>
             <p>
@@ -201,9 +202,10 @@ const Tos = () => {
                 If you are a copyright owner, or authorized on behalf of one,
                 and you believe that the copyrighted work has been copied in a
                 way that constitutes copyright infringement, please submit your
-                claim via email to <span class='email'>capitalrogue@gmail.com</span>, with the subject
-                line: “Copyright Infringement” and include in your claim a
-                detailed description of the alleged Infringement as detailed
+                claim via email to{' '}
+                <span class='email'>richard.lenkovits@gmail.com</span>, with the
+                subject line: “Copyright Infringement” and include in your claim
+                a detailed description of the alleged Infringement as detailed
                 below, under “DMCA Notice and Procedure for Copyright
                 Infringement Claims”
             </p>
@@ -214,74 +216,31 @@ const Tos = () => {
                 Service on your copyright.
             </p>
             <p>
-                <span class='num'>9</span>.{' '}
-                <b>
-                    DMCA Notice and Procedure for Copyright Infringement Claims
-                </b>
-            </p>
-            <p>
-                You may submit a notification pursuant to the Digital Millennium
-                Copyright Act (DMCA) by providing our Copyright Agent with the
-                following information in writing (see 17 U.S.C 512(c)(3) for
-                further detail):
-            </p>
-            <p>
-                0.1. an electronic or physical signature of the person
-                authorized to act on behalf of the owner of the
-                copyright&#8217;s interest;
-            </p>
-            <p>
-                0.2. a description of the copyrighted work that you claim has
-                been infringed, including the URL (i.e., web page address) of
-                the location where the copyrighted work exists or a copy of the
-                copyrighted work;
-            </p>
-            <p>
-                0.3. identification of the URL or other specific location on
-                Service where the material that you claim is infringing is
-                located;
-            </p>
-            <p>0.4. your address, telephone number, and email address;</p>
-            <p>
-                0.5. a statement by you that you have a good faith belief that
-                the disputed use is not authorized by the copyright owner, its
-                agent, or the law;
-            </p>
-            <p>
-                0.6. a statement by you, made under penalty of perjury, that the
-                above information in your notice is accurate and that you are
-                the copyright owner or authorized to act on the copyright
-                owner&#8217;s behalf.
-            </p>
-            <p>
-                You can contact our Copyright Agent via email at{' '}
-                <span class='email'>capitalrogue@gmail.com</span>.
-            </p>
-            <p>
-                <span class='num'>10</span>. <b>Error Reporting and Feedback</b>
+                <span class='num'>9</span>. <b>Error Reporting and Feedback</b>
             </p>
             <p>
                 You may provide us either directly at{' '}
-                <span class='email'>capitalrogue@gmail.com</span> or via third party sites and tools
-                with information and feedback concerning errors, suggestions for
-                improvements, ideas, problems, complaints, and other matters
-                related to our Service (“Feedback”). You acknowledge and agree
-                that: (i) you shall not retain, acquire or assert any
-                intellectual property right or other right, title or interest in
-                or to the Feedback; (ii) Company may have development ideas
-                similar to the Feedback; (iii) Feedback does not contain
-                confidential information or proprietary information from you or
-                any third party; and (iv) Company is not under any obligation of
-                confidentiality with respect to the Feedback. In the event the
-                transfer of the ownership to the Feedback is not possible due to
-                applicable mandatory laws, you grant Company and its affiliates
-                an exclusive, transferable, irrevocable, free-of-charge,
+                <span class='email'>richard.lenkovits@gmail.com</span> or via third
+                party sites and tools with information and feedback concerning
+                errors, suggestions for improvements, ideas, problems,
+                complaints, and other matters related to our Service
+                (“Feedback”). You acknowledge and agree that: (i) you shall not
+                retain, acquire or assert any intellectual property right or
+                other right, title or interest in or to the Feedback; (ii)
+                Company may have development ideas similar to the Feedback;
+                (iii) Feedback does not contain confidential information or
+                proprietary information from you or any third party; and (iv)
+                Company is not under any obligation of confidentiality with
+                respect to the Feedback. In the event the transfer of the
+                ownership to the Feedback is not possible due to applicable
+                mandatory laws, you grant Company and its affiliates an
+                exclusive, transferable, irrevocable, free-of-charge,
                 sub-licensable, unlimited and perpetual right to use (including
                 copy, modify, create derivative works, publish, distribute and
                 commercialize) Feedback in any manner and for any purpose.
             </p>
             <p>
-                <span class='num'>11</span>. <b>Links To Other Web Sites</b>
+                <span class='num'>10</span>. <b>Links To Other Web Sites</b>
             </p>
             <p>
                 Our Service may contain links to third party web sites or
@@ -289,11 +248,11 @@ const Tos = () => {
                 <span class='company-name'>capitalrogue</span>.
             </p>
             <p>
-                <span class='company-name'>capitalrogue</span> has no control over, and
-                assumes no responsibility for the content, privacy policies, or
-                practices of any third party web sites or services. We do not
-                warrant the offerings of any of these entities/individuals or
-                their websites.
+                <span class='company-name'>capitalrogue</span> has no control
+                over, and assumes no responsibility for the content, privacy
+                policies, or practices of any third party web sites or services.
+                We do not warrant the offerings of any of these
+                entities/individuals or their websites.
             </p>
             <p>
                 YOU ACKNOWLEDGE AND AGREE THAT COMPANY SHALL NOT BE RESPONSIBLE
@@ -308,7 +267,7 @@ const Tos = () => {
                 VISIT.
             </p>
             <p>
-                <span class='num'>12</span>. <b>Disclaimer Of Warranty</b>
+                <span class='num'>11</span>. <b>Disclaimer Of Warranty</b>
             </p>
             <p>
                 THESE SERVICES ARE PROVIDED BY COMPANY ON AN “AS IS” AND “AS
@@ -344,7 +303,7 @@ const Tos = () => {
                 EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
             </p>
             <p>
-                <span class='num'>13</span>. <b>Limitation Of Liability</b>
+                <span class='num'>12</span>. <b>Limitation Of Liability</b>
             </p>
             <p>
                 EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD US AND OUR OFFICERS,
@@ -369,7 +328,7 @@ const Tos = () => {
                 YOU.
             </p>
             <p>
-                <span class='num'>14</span>. <b>Termination</b>
+                <span class='num'>13</span>. <b>Termination</b>
             </p>
             <p>
                 We may terminate or suspend your account and bar access to
@@ -388,7 +347,7 @@ const Tos = () => {
                 indemnity and limitations of liability.
             </p>
             <p>
-                <span class='num'>15</span>. <b>Governing Law</b>
+                <span class='num'>14</span>. <b>Governing Law</b>
             </p>
             <p>
                 These Terms shall be governed and construed in accordance with
@@ -406,7 +365,7 @@ const Tos = () => {
                 agreements we might have had between us regarding Service.
             </p>
             <p>
-                <span class='num'>16</span>. <b>Changes To Service</b>
+                <span class='num'>15</span>. <b>Changes To Service</b>
             </p>
             <p>
                 We reserve the right to withdraw or amend our Service, and any
@@ -418,7 +377,7 @@ const Tos = () => {
                 including registered users.
             </p>
             <p>
-                <span class='num'>17</span>. <b>Amendments To Terms</b>
+                <span class='num'>16</span>. <b>Amendments To Terms</b>
             </p>
             <p>
                 We may amend Terms at any time by posting the amended terms on
@@ -438,7 +397,7 @@ const Tos = () => {
                 to use Service.
             </p>
             <p>
-                <span class='num'>18</span>. <b>Waiver And Severability</b>
+                <span class='num'>17</span>. <b>Waiver And Severability</b>
             </p>
             <p>
                 No waiver by Company of any term or condition set forth in Terms
@@ -455,7 +414,7 @@ const Tos = () => {
                 provisions of Terms will continue in full force and effect.
             </p>
             <p>
-                <span class='num'>19</span>. <b>Acknowledgement</b>
+                <span class='num'>18</span>. <b>Acknowledgement</b>
             </p>
             <p>
                 BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU
@@ -463,13 +422,13 @@ const Tos = () => {
                 TO BE BOUND BY THEM.
             </p>
             <p>
-                <span class='num'>20</span>. <b>Contact Us</b>
+                <span class='num'>19</span>. <b>Contact Us</b>
             </p>
             <p>
                 Please send your feedback, comments, requests for technical
                 support by email:{' '}
                 <b>
-                    <span class='email'>capitalrogue@gmail.com</span>
+                    <span class='email'>richard.lenkovits@gmail.com</span>
                 </b>
                 .
             </p>

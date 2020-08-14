@@ -6,7 +6,7 @@ module.exports = {
         },
         description: `A blog for the capitalist rogue.`,
         siteUrl: `https://capitalrogue.com/`,
-        tags: ['Food', 'Leisure', 'Money', 'Learning', 'Memes', 'Media'],
+        tags: ['Food', 'Money', 'Learning', 'Memes', 'Media'],
         featured: [
             `8 chill Netflix shows to watch without commitment`,
             'All the shady escapades around Bitcoin',
