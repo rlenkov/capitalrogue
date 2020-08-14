@@ -130,7 +130,7 @@ const About = () => {
                     <div className={styles.overImageBox}>
                         <p className={styles.centered}>
                             If you like our work feel free to{' '}
-                            <a href={'mailto:capitalrogue@gmail.com'}>
+                            <a href={'mailto:richard.lenkovits@gmail.com'}>
                                 get in touch
                             </a>{' '}
                             or see who's running the "shop"{' '}
