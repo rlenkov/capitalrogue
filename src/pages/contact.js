@@ -6,7 +6,10 @@ import Contact from '../components/contact'
 const ContactPage = ({ location }) => {
     return (
         <Layout location={location}>
-            <SEO title='Contact' />
+            <SEO
+                title='Contact'
+                description='Get in touch with the creators of CR! Blog.'
+            />
             <Contact />
         </Layout>
     )

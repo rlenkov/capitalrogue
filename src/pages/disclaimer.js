@@ -6,7 +6,7 @@ import Disclaimer from '../components/disclaimer'
 const DisclaimerPage = ({ location }) => {
     return (
         <Layout location={location}>
-            <SEO title='Disclaimer' />
+            <SEO title='Disclaimer' description='Disclaimer' />
             <Disclaimer />
         </Layout>
     )

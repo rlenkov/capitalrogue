@@ -6,8 +6,11 @@ import Topics from '../components/topics'
 
 const TopicsPage = props => {
     return (
-        <Layout location={props.location} >
-            <SEO title='Topics' />
+        <Layout location={props.location}>
+            <SEO
+                title='Topics'
+                description='Discover our topics at CR! Blog.'
+            />
             <Topics
                 tags={props.data.site.siteMetadata.tags}
                 meta={props.location.state}

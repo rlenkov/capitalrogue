@@ -6,7 +6,7 @@ import Privacy from '../components/privacy'
 const PrivacyPage = ({ location }) => {
     return (
         <Layout location={location}>
-            <SEO title='Privacy Policy' />
+            <SEO title='Privacy Policy' description='Privacy Policy' />
             <Privacy />
         </Layout>
     )

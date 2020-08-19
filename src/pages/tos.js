@@ -6,7 +6,7 @@ import Tos from '../components/tos'
 const TosPage = ({ location }) => {
     return (
         <Layout location={location}>
-            <SEO title='Terms of Service' />
+            <SEO title='Terms of Service' description='Our Terms of Service' />
             <Tos />
         </Layout>
     )

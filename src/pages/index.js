@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 const BlogIndex = ({ location }) => {
     return (
         <Layout location={location}>
-            <SEO title='All posts' />
+            <SEO title='Blog' />
             <Home />
         </Layout>
     )
