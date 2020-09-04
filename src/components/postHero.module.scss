@@ -84,6 +84,14 @@
         border: 5px dotted $cr-orange;
     }
 
+    .image-container:hover {
+        opacity: 0.8;
+    }
+
+    .excerpt:hover {
+        opacity: 0.8;
+    }
+
     .banner {
         display: flex;
         flex-direction: row;
@@ -95,16 +103,28 @@
         -webkit-transition: transform 0.3s ease;
         -moz-transition: transform 0.3s ease;
         -o-transition: transform 0.3s ease;
-        cursor: pointer;
     }
 
     .banner:hover {
         border: 5px dotted $cr-orange;
     }
 
+    .banner-header {
+        a {
+            @include blog-card-title;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
     .banner-image-box {
         width: 150px;
         min-width: 150px;
         height: 150px;
+    }
+    .banner-image-box:hover {
+        opacity: 0.8;
     }
 }

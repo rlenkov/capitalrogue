@@ -45,7 +45,7 @@ exports.createPages = async ({ graphql, actions }) => {
                                 title
                                 cover_image {
                                     childImageSharp {
-                                        fluid(quality: 100, maxWidth: 630) {
+                                        fluid(quality: 100, maxWidth: 800) {
                                             base64
                                             aspectRatio
                                             src

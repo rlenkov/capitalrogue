@@ -30,6 +30,7 @@ export const PostHero = props => {
                 </p>
             </header>
             <div
+                className={styles.imageContainer}
                 onClick={() => {
                     navigate(props.slug)
                 }}
@@ -75,17 +76,15 @@ PostHero.defaultProps = {
 
 export const PostBanner = props => {
     return (
-        <article
-            className={styles.banner}
-            onClick={() => {
-                navigate(props.slug)
-            }}
-        >
+        <article className={styles.banner}>
             <Img
                 fluid={props.fluidImgData}
                 objectFit='cover'
                 imgStyle={{ objectFit: 'cover' }}
                 className={styles.bannerImageBox}
+                onClick={() => {
+                    navigate(props.slug)
+                }}
             />
 
             <header className={styles.bannerHeader}>

@@ -8,9 +8,9 @@ module.exports = {
         siteUrl: `https://capitalrogue.com/`,
         tags: ['Food', 'Money', 'Learning', 'Memes', 'Media'],
         featured: [
+            `Make money with these 6 online business platforms`,
+            `Why Riot is the new big deal in the video game industry`,
             `8 chill Netflix shows to watch without commitment`,
-            'All the shady escapades around Bitcoin',
-            'The world of social media influencers',
             'How fake gurus operate under the hood',
         ],
     },
@@ -39,6 +39,7 @@ module.exports = {
                             maxWidth: 800,
                             showCaptions: true,
                             markdownCaptions: true,
+                            wrapperStyle: 'width: 100%; margin-left: 0;',
                         },
                     },
                     {
